@@ -32,7 +32,7 @@ public class Pendulum : Card
 
     protected override void UpdateDescription()
     {
-        cardDescriptionDisplay.text = "Damages all Beasts in a row by " + 5 * power + ".";
+        cardDescriptionDisplay.text = "Damages all Beasts in a row by " + damage * power + ".";
 
     }
 

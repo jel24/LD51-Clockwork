@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onDeath: {fileID: 11400000, guid: 2572291cf982886449d0dd118bab2bd9, type: 2}
   updateHealth: {fileID: 11400000, guid: ed422bf5399fa1d4aadcd991da1a054d, type: 2}
-  startingHealth: 100
+  startingHealth: 50

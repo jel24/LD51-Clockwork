@@ -14,6 +14,12 @@ public class Deck : MonoBehaviour
     void Start()
     {
         allCards = GetComponentsInChildren<Card>();
+        for (int i = 0; i < allCards.Length; i++)
+        {
+            allCards[i].transform.SetSiblingIndex(Random.Range(0, allCards.Length));
+        }
+        allCards = GetComponentsInChildren<Card>();
+
         deckCards = new Queue<Card>();
         for (int i = 0; i < allCards.Length; i++)
         {

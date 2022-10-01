@@ -49,9 +49,22 @@ public class Hand : MonoBehaviour
         {
             if (cardsInHand[i])
             {
-                cardsInHand[i].transform.position = cardPositions[i];
                 cardsInHand[i].transform.eulerAngles = cardRotations[i];
+                StartCoroutine(SmoothAnimation(cardsInHand[i], i));
             }
+        }
+    }
+
+    IEnumerator SmoothAnimation(Card c, int index)
+    {
+        float timer = 0f;
+        while (timer < .875f)
+        {
+            timer += Time.deltaTime;
+            c.transform.position = new Vector3(Mathf.Lerp(c.transform.position.x, cardPositions[index].x, timer / .875f),
+                Mathf.Lerp(c.transform.position.y, cardPositions[index].y, timer / .875f),
+                Mathf.Lerp(c.transform.position.z, cardPositions[index].z, timer / .875f));
+            yield return null;
         }
     }
 

@@ -12,9 +12,12 @@ public class Beast : MonoBehaviour
     [SerializeField] HealthManager healthManager;
     [SerializeField] TextMeshPro healthText;
     [SerializeField] TextMeshPro powerText;
+    [SerializeField] AudioSource audioSource;
+    [SerializeField] AudioClip[] clips;
 
     int power = 0;
     int health = 0;
+    bool isDead = false;
 
     void Start()
     {
@@ -22,12 +25,13 @@ public class Beast : MonoBehaviour
         healthText.text = startingHealth.ToString();
         power = startingPower;
         health = startingHealth;
+        audioSource.clip = clips[Random.Range(0, clips.Length - 1)];
+        audioSource.Play();
     }
 
     public virtual void Activate()
     {
         power++;
-        health += power;
         powerText.text = power.ToString();
         healthText.text = health.ToString();
 
@@ -35,8 +39,13 @@ public class Beast : MonoBehaviour
 
     public virtual void Attack()
     {
-        healthManager.TakeDamage(power);
-        attackAnimation.Play();
+        if (!isDead)
+        {
+            healthManager.TakeDamage(power);
+            attackAnimation.Play();
+            audioSource.clip = clips[Random.Range(0, clips.Length - 1)];
+            audioSource.Play();
+        }
     }
 
     public void TakeDamage(int howMuch)
@@ -48,10 +57,13 @@ public class Beast : MonoBehaviour
             Die();
         }
         healthText.text = health.ToString();
+        audioSource.clip = clips[Random.Range(0, clips.Length - 1)];
+        audioSource.Play();
     }
 
     public void Die()
     {
+        bool isDead = true;
         Invoke("CleanUp", 1f);
     }
 
@@ -60,5 +72,17 @@ public class Beast : MonoBehaviour
         Destroy(gameObject);
     }
 
+    public void Clash(Minion m)
+    {
+        if (!isDead)
+        {
+            m.TakeDamage(power);
+            attackAnimation.Play();
+            TakeDamage(m.GetPower());
+            healthText.text = health.ToString();
+        }
+
+
+    }
 
 }

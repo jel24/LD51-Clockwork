@@ -9,4 +9,10 @@ public class GameOverSceneLoader : MonoBehaviour
     {
         SceneManager.LoadScene("Game Over");
     }
+
+    public void Victory()
+    {
+        SceneManager.LoadScene("Victory");
+
+    }
 }

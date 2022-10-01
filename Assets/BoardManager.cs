@@ -101,17 +101,18 @@ public class BoardManager : MonoBehaviour
     {
         for (int i = boardSpaces.Length - 1; i >= 0; i--)
         {
-            Debug.Log(i);
             Beast beast = boardSpaces[i].GetBeastOccupant();
             if (beast)
             {
-                Debug.Log(beast.name);
                 if (i <= 19)
                 {
-                    if (!boardSpaces[i + 5].GetBeastOccupant())
+                    if (!boardSpaces[i + 5].GetBeastOccupant() && !boardSpaces[i+5].GetMinionOccupant())
                     {
                         boardSpaces[i].ClearBeastOccupant();
                         boardSpaces[i + 5].SetBeastOccupant(beast, true);
+                    } else if (boardSpaces[i + 5].GetMinionOccupant())
+                    {
+                        beast.Clash(boardSpaces[i + 5].GetMinionOccupant());
                     }
 
                 } else

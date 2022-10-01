@@ -29,9 +29,9 @@ public class BoardSpace : MonoBehaviour
         while (timer < .875f)
         {
             timer += Time.deltaTime;
-            b.transform.position = new Vector3(Mathf.Lerp(b.transform.position.x, transform.position.x, timer / 1f),
-                Mathf.Lerp(b.transform.position.y, transform.position.y, timer / 1f),
-                Mathf.Lerp(b.transform.position.z, transform.position.z, timer / 1f));
+            b.transform.position = new Vector3(Mathf.Lerp(b.transform.position.x, transform.position.x, timer / .875f),
+                Mathf.Lerp(b.transform.position.y, transform.position.y, timer / .875f),
+                Mathf.Lerp(b.transform.position.z, transform.position.z, timer / .875f));
             yield return null;
         }
     }

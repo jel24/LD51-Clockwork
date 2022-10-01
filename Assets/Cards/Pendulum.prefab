@@ -132,7 +132,7 @@ Transform:
   m_GameObject: {fileID: 1120629653724984651}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.25, y: 1.25, z: 2}
+  m_LocalScale: {x: 1.1, y: 1.1, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2662328050129471209}
@@ -162,6 +162,7 @@ MonoBehaviour:
   burnFX: {fileID: 8236504839355924613}
   hoverFX: {fileID: 5656178998218225754}
   targetType: 0
+  mouseManager: {fileID: 0}
   damage: 5
 --- !u!65 &4968881895211189541
 BoxCollider:
@@ -246,7 +247,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1340519723260354874}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.25}
+  m_LocalPosition: {x: 0, y: 0, z: -0.21}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -320,7 +321,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: ' '
+  m_text: 5
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c556873ae03d8c5498fe2220360e800e, type: 2}
   m_sharedMaterial: {fileID: 488031100038712450, guid: c556873ae03d8c5498fe2220360e800e, type: 2}

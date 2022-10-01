@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class BeastDeck : MonoBehaviour
 {
     BeastCard[] allCards;
     Queue<BeastCard> deckCards;
+
+    [SerializeField] TextMeshProUGUI counter;
 
     void Start()
     {
@@ -18,10 +21,13 @@ public class BeastDeck : MonoBehaviour
             allCards[i].transform.localEulerAngles = new Vector3(90f, 0f, 0f);
 
         }
+        counter.text = deckCards.Count.ToString();
+
     }
 
     public void DrawCard()
     {
         deckCards.Dequeue().Play();
+        counter.text = deckCards.Count.ToString();
     }
 }

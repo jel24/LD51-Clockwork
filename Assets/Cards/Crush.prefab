@@ -1,0 +1,158 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &3621728813701655188
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 180787075331119134, guid: 0ace59c4b8c472547a307501f88f8df6, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 180787075331119134, guid: 0ace59c4b8c472547a307501f88f8df6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 180787075331119134, guid: 0ace59c4b8c472547a307501f88f8df6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 180787075331119134, guid: 0ace59c4b8c472547a307501f88f8df6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 180787075331119134, guid: 0ace59c4b8c472547a307501f88f8df6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 180787075331119134, guid: 0ace59c4b8c472547a307501f88f8df6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 180787075331119134, guid: 0ace59c4b8c472547a307501f88f8df6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 180787075331119134, guid: 0ace59c4b8c472547a307501f88f8df6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 180787075331119134, guid: 0ace59c4b8c472547a307501f88f8df6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 180787075331119134, guid: 0ace59c4b8c472547a307501f88f8df6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 180787075331119134, guid: 0ace59c4b8c472547a307501f88f8df6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1120629653724984651, guid: 0ace59c4b8c472547a307501f88f8df6, type: 3}
+      propertyPath: m_Name
+      value: Crush
+      objectReference: {fileID: 0}
+    - target: {fileID: 1480884191238888283, guid: 0ace59c4b8c472547a307501f88f8df6, type: 3}
+      propertyPath: cardName
+      value: Rolling Cog
+      objectReference: {fileID: 0}
+    - target: {fileID: 1480884191238888283, guid: 0ace59c4b8c472547a307501f88f8df6, type: 3}
+      propertyPath: targetType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1480884191238888283, guid: 0ace59c4b8c472547a307501f88f8df6, type: 3}
+      propertyPath: cardDescription
+      value: Damages all Beasts in a column by 6 x Power.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5297642692478549490, guid: 0ace59c4b8c472547a307501f88f8df6, type: 3}
+      propertyPath: whatHappens.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 4565963340237999830}
+    - target: {fileID: 5297642692478549490, guid: 0ace59c4b8c472547a307501f88f8df6, type: 3}
+      propertyPath: whatHappens.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: IncrementPower
+      objectReference: {fileID: 0}
+    - target: {fileID: 5297642692478549490, guid: 0ace59c4b8c472547a307501f88f8df6, type: 3}
+      propertyPath: whatHappens.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Card_Crush, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7341196979245823779, guid: 0ace59c4b8c472547a307501f88f8df6, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 715aed96c924e0140a04718ed6974635, type: 2}
+    m_RemovedComponents:
+    - {fileID: 1480884191238888283, guid: 0ace59c4b8c472547a307501f88f8df6, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 0ace59c4b8c472547a307501f88f8df6, type: 3}
+--- !u!114 &33898686106572760 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3619374052202249548, guid: 0ace59c4b8c472547a307501f88f8df6, type: 3}
+  m_PrefabInstance: {fileID: 3621728813701655188}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4143701673481169612 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 847685658204078168, guid: 0ace59c4b8c472547a307501f88f8df6, type: 3}
+  m_PrefabInstance: {fileID: 3621728813701655188}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &4453973794002837471 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1120629653724984651, guid: 0ace59c4b8c472547a307501f88f8df6, type: 3}
+  m_PrefabInstance: {fileID: 3621728813701655188}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4565963340237999830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4453973794002837471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfe4ff477f21c1f468ce307af4d19c77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cardName: Crush
+  cardDescription: Deals 10 * power damage to a single Beast.
+  cardNameDisplay: {fileID: 4143701673481169612}
+  cardDescriptionDisplay: {fileID: 5605479475450657828}
+  powerDisplay: {fileID: 33898686106572760}
+  burnFX: {fileID: 4615915469787064849}
+  hoverFX: {fileID: 8952100519789826766}
+  targetType: 2
+  mouseManager: {fileID: 0}
+  damage: 10
+--- !u!198 &4615915469787064849 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 8236504839355924613, guid: 0ace59c4b8c472547a307501f88f8df6, type: 3}
+  m_PrefabInstance: {fileID: 3621728813701655188}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5605479475450657828 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9189699255227471536, guid: 0ace59c4b8c472547a307501f88f8df6, type: 3}
+  m_PrefabInstance: {fileID: 3621728813701655188}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!198 &8952100519789826766 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 5656178998218225754, guid: 0ace59c4b8c472547a307501f88f8df6, type: 3}
+  m_PrefabInstance: {fileID: 3621728813701655188}
+  m_PrefabAsset: {fileID: 0}
