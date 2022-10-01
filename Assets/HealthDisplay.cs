@@ -7,10 +7,12 @@ public class HealthDisplay : MonoBehaviour
 
     [SerializeField] HealthManager healthManager;
     [SerializeField] TextMeshProUGUI text;
+    [SerializeField] Animator anim;
 
     public void UpdateHealthDisplay()
     {
         text.text = healthManager.GetHealth().ToString();
+        anim.SetTrigger("TakeDamage");
     }
 
 }

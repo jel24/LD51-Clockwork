@@ -11,12 +11,11 @@ public class HealthManager : ScriptableObject
     public TriggeredEvent onDeath, updateHealth;
     public int startingHealth;
 
-    void Awake()
+    public void NewGame()
     {
         currentHealth = startingHealth;
         updateHealth.Trigger();
     }
-
 
     public void TakeDamage(int howMuch)
     {

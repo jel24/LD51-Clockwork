@@ -6,23 +6,46 @@ using TMPro;
 public class Card : MonoBehaviour
 {
 
-    [SerializeField] string cardName;
-    [SerializeField] string cardDescription;
-    [SerializeField] TextMeshPro cardNameDisplay;
-    [SerializeField] TextMeshPro cardDescriptionDisplay;
-    [SerializeField] TextMeshPro powerDisplay;
-    [SerializeField] ParticleSystem burnFX;
-    [SerializeField] ParticleSystem hoverFX;
+    [SerializeField] protected string cardName;
+    [SerializeField] protected string cardDescription;
+    [SerializeField] protected TextMeshPro cardNameDisplay;
+    [SerializeField] protected TextMeshPro cardDescriptionDisplay;
+    [SerializeField] protected TextMeshPro powerDisplay;
+    [SerializeField] protected ParticleSystem burnFX;
+    [SerializeField] protected ParticleSystem hoverFX;
+    [SerializeField] protected TargetType targetType;
+    [SerializeField] protected MouseManager mouseManager;
 
     protected int power = 0;
     protected bool isPlayable = false;
 
+    bool markedForDeletion = false;
+
     public void Burn()
     {
         burnFX.Play();
+        markedForDeletion = true;
+        //StartCoroutine("FadeOut");
         Invoke("CleanUp", 1f);
     }
 
+    IEnumerable FadeOut()
+    {
+        float timer = 0f;
+        Material[] materials = GetComponentsInChildren<Material>();
+        while (timer < 1f)
+        {
+            timer += Time.deltaTime;
+            foreach (Material r in materials)
+            {
+                Color c = r.color;
+                Color newColor = new Color(c.r, c.g, c.b, 1 - (timer / 1f));
+                r.color = newColor;
+            }
+        }
+        
+        yield return null;
+    }
 
     void CleanUp()
     {
@@ -31,12 +54,13 @@ public class Card : MonoBehaviour
 
     public virtual void Play()
     {
-        if (isPlayable)
-        {
 
-        }
     }
 
+    public bool IsMarkedForDeletion()
+    {
+        return markedForDeletion;
+    }
     public void Hover()
     {
         if (isPlayable) hoverFX.Play();
@@ -56,7 +80,23 @@ public class Card : MonoBehaviour
         {
             power++;
             powerDisplay.text = power.ToString();
+            UpdateDescription();
         }
+    }
+
+    protected virtual void UpdateDescription()
+    {
+
+    }
+
+    public virtual void TargetsFound(List<GameObject> objects)
+    {
+
+    }
+
+    public virtual void PlayFX(BoardSpace b)
+    {
+
     }
 
 }

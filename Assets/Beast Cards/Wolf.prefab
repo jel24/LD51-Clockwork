@@ -1,0 +1,135 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &2630994200241848422
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 180787075331119134, guid: 5b99b1ce31953764c8f41681b7cc7bb6, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 180787075331119134, guid: 5b99b1ce31953764c8f41681b7cc7bb6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 180787075331119134, guid: 5b99b1ce31953764c8f41681b7cc7bb6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 180787075331119134, guid: 5b99b1ce31953764c8f41681b7cc7bb6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 180787075331119134, guid: 5b99b1ce31953764c8f41681b7cc7bb6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 180787075331119134, guid: 5b99b1ce31953764c8f41681b7cc7bb6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 180787075331119134, guid: 5b99b1ce31953764c8f41681b7cc7bb6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 180787075331119134, guid: 5b99b1ce31953764c8f41681b7cc7bb6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 180787075331119134, guid: 5b99b1ce31953764c8f41681b7cc7bb6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 180787075331119134, guid: 5b99b1ce31953764c8f41681b7cc7bb6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 180787075331119134, guid: 5b99b1ce31953764c8f41681b7cc7bb6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1120629653724984651, guid: 5b99b1ce31953764c8f41681b7cc7bb6, type: 3}
+      propertyPath: m_Name
+      value: Wolf
+      objectReference: {fileID: 0}
+    - target: {fileID: 1120629653724984651, guid: 5b99b1ce31953764c8f41681b7cc7bb6, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 5297642692478549490, guid: 5b99b1ce31953764c8f41681b7cc7bb6, type: 3}
+      propertyPath: whatHappens.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 4263758278978907357}
+    - target: {fileID: 5297642692478549490, guid: 5b99b1ce31953764c8f41681b7cc7bb6, type: 3}
+      propertyPath: whatHappens.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8585385300659764667, guid: 5b99b1ce31953764c8f41681b7cc7bb6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 8902975783104115911, guid: 5b99b1ce31953764c8f41681b7cc7bb6, type: 3}
+    - {fileID: 5297642692478549490, guid: 5b99b1ce31953764c8f41681b7cc7bb6, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 5b99b1ce31953764c8f41681b7cc7bb6, type: 3}
+--- !u!1 &3102538081678177581 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1120629653724984651, guid: 5b99b1ce31953764c8f41681b7cc7bb6, type: 3}
+  m_PrefabInstance: {fileID: 2630994200241848422}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4263758278978907357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3102538081678177581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b0cf7425f8a909469389d8db47e0bc2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cardName: Wolf
+  cardDescription: Summon wolf.
+  cardNameDisplay: {fileID: 3404931138147696702}
+  cardDescriptionDisplay: {fileID: 6560466481304704726}
+  burnFX: {fileID: 6255177494171730147}
+  hoverFX: {fileID: 7709568404089550908}
+  boardManager: {fileID: 0}
+  monsterParent: {fileID: 0}
+  beastPrefab: {fileID: 4413476963161646743, guid: 148d085881494b842a013bf3a5b6778a, type: 3}
+--- !u!114 &3404931138147696702 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 847685658204078168, guid: 5b99b1ce31953764c8f41681b7cc7bb6, type: 3}
+  m_PrefabInstance: {fileID: 2630994200241848422}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!198 &6255177494171730147 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 8236504839355924613, guid: 5b99b1ce31953764c8f41681b7cc7bb6, type: 3}
+  m_PrefabInstance: {fileID: 2630994200241848422}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6560466481304704726 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9189699255227471536, guid: 5b99b1ce31953764c8f41681b7cc7bb6, type: 3}
+  m_PrefabInstance: {fileID: 2630994200241848422}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!198 &7709568404089550908 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 5656178998218225754, guid: 5b99b1ce31953764c8f41681b7cc7bb6, type: 3}
+  m_PrefabInstance: {fileID: 2630994200241848422}
+  m_PrefabAsset: {fileID: 0}

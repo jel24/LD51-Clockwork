@@ -29,7 +29,7 @@ public class Hand : MonoBehaviour
         if (whichIndex == 5)
         {
             DestroyCard(4);
-        } else if (cardsInHand[whichIndex])
+        } else if (cardsInHand[whichIndex] && !cardsInHand[whichIndex].IsMarkedForDeletion())
         {
             AdvanceCardPosition(whichIndex + 1);
             cardsInHand[whichIndex] = cardsInHand[whichIndex - 1];

@@ -3,10 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+
 public class MouseManager : MonoBehaviour
 {
 
     [SerializeField] Camera mainCamera;
+    [SerializeField] BoardManager boardManager;
+    [SerializeField] GameObject boardTargetUI;
+
+    bool boardTarget = false;
+    TargetType activeTargetType;
+    Card activeCard;
 
     void Update()
     {
@@ -19,17 +26,46 @@ public class MouseManager : MonoBehaviour
     {
         if (context.performed)
         {
-            Card card = CheckForCard();
-            Debug.Log(card);
-            if (card) card.Play();
+            if (boardTarget)
+            {
+                BoardSpace space = CheckForSpace();
+                Debug.Log(space);
+
+                if (space)
+                {
+                    activeCard.TargetsFound(boardManager.InterpretInput(space, activeTargetType));
+                    activeCard.PlayFX(space);
+                    boardTarget = false;
+                    boardTargetUI.SetActive(false);
+                    activeCard = null;
+                }
+            } else
+            {
+                Card card = CheckForCard();
+                Debug.Log(card);
+                if (card) card.Play();
+            }
+
         }
 
     }
 
     public void Hover()
     {
-        Card card = CheckForCard();
-        if (card) card.Hover();
+        if (boardTarget)
+        {
+            BoardSpace space = CheckForSpace();
+            if (space)
+            {
+                boardManager.HoverInput(space, activeTargetType);
+            }
+        }
+        else
+        {
+            Card card = CheckForCard();
+            if (card) card.Hover();
+        }
+        
     }
 
     Card CheckForCard()
@@ -47,5 +83,33 @@ public class MouseManager : MonoBehaviour
         {
             return null;
         }
+    }
+
+    BoardSpace CheckForSpace()
+    {
+        Ray ray = mainCamera.ScreenPointToRay(Mouse.current.position.ReadValue());
+        if (Physics.Raycast(ray: ray, hitInfo: out RaycastHit hit) && hit.collider)
+        {
+            if (hit.collider.gameObject.tag == "Space")
+            {
+                return hit.collider.gameObject.GetComponent<BoardSpace>();
+            }
+            else
+            {
+                return null;
+            }
+        }
+        else
+        {
+            return null;
+        }
+    }
+
+    public void ToggleBoardTarget(TargetType t, Card originator)
+    {
+        boardTarget = true;
+        activeTargetType = t;
+        boardTargetUI.SetActive(true);
+        activeCard = originator;
     }
 }

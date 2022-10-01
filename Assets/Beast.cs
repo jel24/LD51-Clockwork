@@ -8,7 +8,7 @@ public class Beast : MonoBehaviour
 
     [SerializeField] protected int startingPower = 0;
     [SerializeField] protected int startingHealth = 0;
-
+    [SerializeField] ParticleSystem attackAnimation;
     [SerializeField] HealthManager healthManager;
     [SerializeField] TextMeshPro healthText;
     [SerializeField] TextMeshPro powerText;
@@ -27,8 +27,16 @@ public class Beast : MonoBehaviour
     public virtual void Activate()
     {
         power++;
+        health += power;
         powerText.text = power.ToString();
+        healthText.text = health.ToString();
+
+    }
+
+    public virtual void Attack()
+    {
         healthManager.TakeDamage(power);
+        attackAnimation.Play();
     }
 
     public void TakeDamage(int howMuch)
@@ -39,7 +47,7 @@ public class Beast : MonoBehaviour
             health = 0;
             Die();
         }
-        healthText.text = startingHealth.ToString();
+        healthText.text = health.ToString();
     }
 
     public void Die()
