@@ -13,7 +13,9 @@ public class Card_RollingCog : Card
 
     public override void TargetsFound(List<GameObject> objects)
     {
-        foreach(GameObject g in objects)
+        playSound.Play();
+
+        foreach (GameObject g in objects)
         {
             Beast b = g.GetComponent<Beast>();
             if (b) b.TakeDamage(damage * power);

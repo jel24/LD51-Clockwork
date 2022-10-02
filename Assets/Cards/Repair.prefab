@@ -67,6 +67,10 @@ PrefabInstance:
       propertyPath: cardDescription
       value: Damages all Beasts in a column by 6 x Power.
       objectReference: {fileID: 0}
+    - target: {fileID: 3076343036633244100, guid: 0ace59c4b8c472547a307501f88f8df6, type: 3}
+      propertyPath: m_Pitch
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5297642692478549490, guid: 0ace59c4b8c472547a307501f88f8df6, type: 3}
       propertyPath: whatHappens.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -97,6 +101,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!82 &1797968261174692688 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 3076343036633244100, guid: 0ace59c4b8c472547a307501f88f8df6, type: 3}
+  m_PrefabInstance: {fileID: 3621728813701655188}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &4143701673481169612 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 847685658204078168, guid: 0ace59c4b8c472547a307501f88f8df6, type: 3}
@@ -136,6 +145,7 @@ MonoBehaviour:
   spellFX: {fileID: 0}
   targetType: 0
   mouseManager: {fileID: 0}
+  playSound: {fileID: 1797968261174692688}
   damage: 7
 --- !u!198 &4615915469787064849 stripped
 ParticleSystem:

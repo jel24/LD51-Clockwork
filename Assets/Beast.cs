@@ -26,7 +26,7 @@ public class Beast : MonoBehaviour
         healthText.text = startingHealth.ToString();
         power = startingPower;
         health = startingHealth;
-        audioSource.clip = clips[Random.Range(0, clips.Length - 1)];
+        audioSource.clip = clips[Random.Range(0, clips.Length)];
         audioSource.Play();
     }
 

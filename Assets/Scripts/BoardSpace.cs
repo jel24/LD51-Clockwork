@@ -11,6 +11,11 @@ public class BoardSpace : MonoBehaviour
 
     public void SetBeastOccupant(Beast b, bool smoothAnimation)
     {
+        if (minionOccupant)
+        {
+            minionOccupant.Die();
+        }
+
         beastOccupant = b;
         if (smoothAnimation)
         {

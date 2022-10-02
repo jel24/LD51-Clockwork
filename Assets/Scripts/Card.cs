@@ -17,6 +17,7 @@ public class Card : MonoBehaviour
     [SerializeField] protected ParticleSystem spellFX;
     [SerializeField] protected TargetType targetType;
     [SerializeField] protected MouseManager mouseManager;
+    [SerializeField] protected AudioSource playSound;
 
     protected int power = 0;
     protected bool isPlayable = false;

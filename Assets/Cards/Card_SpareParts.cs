@@ -10,7 +10,12 @@ public class Card_SpareParts : Card
     public override void IncrementPower()
     {
         base.IncrementPower();
-        if (power > 5) power = 5;
+        if (isPlayable)
+        {
+            if (power > 5) power = 5;
+            UpdateDescription();
+        }
+
     }
 
     public override void Play()
@@ -21,6 +26,7 @@ public class Card_SpareParts : Card
             {
                 deck.DrawCard();
             }
+            playSound.Play();
 
             Burn();
 

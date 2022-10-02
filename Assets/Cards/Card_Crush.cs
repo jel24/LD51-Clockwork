@@ -13,6 +13,8 @@ public class Card_Crush : Card
 
     public override void TargetsFound(List<GameObject> objects)
     {
+        playSound.Play();
+
         foreach (GameObject g in objects)
         {
             BoardSpace space = g.GetComponent<BoardSpace>();
@@ -20,6 +22,7 @@ public class Card_Crush : Card
             {
                 Beast b = space.GetBeastOccupant();
                 if (b) b.TakeDamage(damage * power);
+
             }
 
         }

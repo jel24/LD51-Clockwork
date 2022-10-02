@@ -13,10 +13,13 @@ public class Card_Repair : Card
 
     public override void TargetsFound(List<GameObject> objects)
     {
-        foreach(GameObject g in objects)
+        playSound.Play();
+
+        foreach (GameObject g in objects)
         {
             Minion b = g.GetComponent<Minion>();
             if (b) b.Heal(damage * power);
+
         }
         Burn();
 

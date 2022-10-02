@@ -13,6 +13,7 @@ public class Pendulum : Card
 
     public override void TargetsFound(List<GameObject> objects)
     {
+        playSound.Play();
         foreach(GameObject g in objects)
         {
             Beast b = g.GetComponent<Beast>();

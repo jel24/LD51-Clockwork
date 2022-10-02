@@ -91,9 +91,25 @@ PrefabInstance:
       propertyPath: startingHealth
       value: 425
       objectReference: {fileID: 0}
+    - target: {fileID: 4683059696038120105, guid: 148d085881494b842a013bf3a5b6778a, type: 3}
+      propertyPath: clips.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4683059696038120105, guid: 148d085881494b842a013bf3a5b6778a, type: 3}
+      propertyPath: clips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: ad0ed6c457d422a4b9b6b09eb59d0395, type: 3}
+    - target: {fileID: 4683059696038120105, guid: 148d085881494b842a013bf3a5b6778a, type: 3}
+      propertyPath: clips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 446f072e7ad5a1b469bac32456b1895b, type: 3}
     - target: {fileID: 7920137614143358130, guid: 148d085881494b842a013bf3a5b6778a, type: 3}
       propertyPath: m_Pitch
-      value: 1
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7920137614143358130, guid: 148d085881494b842a013bf3a5b6778a, type: 3}
+      propertyPath: m_Volume
+      value: 0.6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 148d085881494b842a013bf3a5b6778a, type: 3}

@@ -16,6 +16,8 @@ public class Card_TuneUp : Card
     {
         if (isPlayable)
         {
+            playSound.Play();
+
             foreach (Card c in hand.cardsInHand)
             {
                 if (c != null && c != this)
