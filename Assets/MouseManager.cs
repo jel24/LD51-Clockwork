@@ -91,7 +91,13 @@ public class MouseManager : MonoBehaviour
         {
             if (hit.collider.gameObject.tag == "Card")
             {
-                return hit.collider.gameObject.GetComponent<Card>();
+                if (!hit.collider.GetComponent<Card>().IsMarkedForDeletion())
+                {
+                    return hit.collider.gameObject.GetComponent<Card>();
+                } else
+                {
+                    return null;
+                }
             } else {
                 return null;
             }
