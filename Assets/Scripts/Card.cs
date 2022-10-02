@@ -13,6 +13,8 @@ public class Card : MonoBehaviour
     [SerializeField] protected TextMeshPro powerDisplay;
     [SerializeField] protected ParticleSystem burnFX;
     [SerializeField] protected ParticleSystem hoverFX;
+    [SerializeField] protected ParticleSystem powerupFX;
+    [SerializeField] protected ParticleSystem spellFX;
     [SerializeField] protected TargetType targetType;
     [SerializeField] protected MouseManager mouseManager;
 
@@ -23,10 +25,14 @@ public class Card : MonoBehaviour
 
     public void Burn()
     {
-        burnFX.Play();
-        markedForDeletion = true;
-        //StartCoroutine("FadeOut");
-        Invoke("CleanUp", 1f);
+        if (!markedForDeletion)
+        {
+            burnFX.Play();
+            markedForDeletion = true;
+            //StartCoroutine("FadeOut");
+            Invoke("CleanUp", 1f);
+        }
+
     }
 
     IEnumerable FadeOut()
@@ -80,6 +86,7 @@ public class Card : MonoBehaviour
         {
             power++;
             powerDisplay.text = power.ToString();
+            powerupFX.Play();
             UpdateDescription();
         }
     }

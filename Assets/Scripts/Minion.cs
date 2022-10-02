@@ -11,6 +11,7 @@ public class Minion : MonoBehaviour
     [SerializeField] protected int bonusHealth;
     [SerializeField] TextMeshPro healthText;
     [SerializeField] TextMeshPro powerText;
+    [SerializeField] ParticleSystem deathFX;
 
     int bonusPower = 0;
     int power = 0;
@@ -27,6 +28,7 @@ public class Minion : MonoBehaviour
     public virtual void Activate()
     {
         power++;
+        health += 1;
         powerText.text = power.ToString();
         healthText.text = health.ToString();
 
@@ -48,9 +50,16 @@ public class Minion : MonoBehaviour
         healthText.text = health.ToString();
     }
 
+    public void Heal(int howMuch)
+    {
+        health += howMuch;
+        healthText.text = health.ToString();
+    }
+
     public void Die()
     {
         Invoke("CleanUp", 1f);
+        deathFX.Play();
     }
 
     void CleanUp()

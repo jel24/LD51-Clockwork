@@ -324,7 +324,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30e088bada8c21d489d1a44ce01bdd5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  howLongBeforeNewGame: 10
+  howLongBeforeNewGame: 15
 --- !u!4 &1513826377
 Transform:
   m_ObjectHideFlags: 0

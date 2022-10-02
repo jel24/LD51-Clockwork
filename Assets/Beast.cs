@@ -9,6 +9,7 @@ public class Beast : MonoBehaviour
     [SerializeField] protected int startingPower = 0;
     [SerializeField] protected int startingHealth = 0;
     [SerializeField] ParticleSystem attackAnimation;
+    [SerializeField] ParticleSystem deathAnimation;
     [SerializeField] HealthManager healthManager;
     [SerializeField] TextMeshPro healthText;
     [SerializeField] TextMeshPro powerText;
@@ -64,6 +65,7 @@ public class Beast : MonoBehaviour
     public void Die()
     {
         bool isDead = true;
+        deathAnimation.Play();
         Invoke("CleanUp", 1f);
     }
 

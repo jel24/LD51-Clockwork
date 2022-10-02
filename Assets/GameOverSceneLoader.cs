@@ -7,11 +7,25 @@ public class GameOverSceneLoader : MonoBehaviour
 {
     public void GameOver()
     {
-        SceneManager.LoadScene("Game Over");
+        Invoke("LoadGameOver", 1f);
+
     }
 
     public void Victory()
     {
+        Invoke("LoadVictory", 1f);
+
+    }
+
+    void LoadGameOver()
+    {
+        SceneManager.LoadScene("Game Over");
+
+    }
+
+    void LoadVictory()
+    {
+        Time.timeScale = 1f;
         SceneManager.LoadScene("Victory");
 
     }

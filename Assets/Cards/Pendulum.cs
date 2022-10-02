@@ -38,6 +38,9 @@ public class Pendulum : Card
 
     public override void PlayFX(BoardSpace b)
     {
+        spellFX.transform.position = b.transform.position;
+        spellFX.transform.eulerAngles = Vector3.zero;
+        spellFX.Play();
 
     }
 }

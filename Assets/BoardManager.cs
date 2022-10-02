@@ -6,7 +6,8 @@ public enum TargetType
 {
     row,
     column,
-    single
+    single,
+    none
 }
 
 
@@ -113,6 +114,22 @@ public class BoardManager : MonoBehaviour
                     } else if (boardSpaces[i + 5].GetMinionOccupant())
                     {
                         beast.Clash(boardSpaces[i + 5].GetMinionOccupant());
+                    } else if (boardSpaces[i + 5].GetBeastOccupant()){
+                        if (i % 5 != 4)
+                        {
+                            if (!boardSpaces[i+1].GetBeastOccupant() && !boardSpaces[i + 1].GetMinionOccupant())
+                            {
+                                boardSpaces[i].ClearBeastOccupant();
+                                boardSpaces[i + 1].SetBeastOccupant(beast, true);
+                            }
+                        } else {
+                            if (!boardSpaces[i - 1].GetBeastOccupant() && !boardSpaces[i - 1].GetMinionOccupant())
+                            {
+                                boardSpaces[i].ClearBeastOccupant();
+                                boardSpaces[i - 1].SetBeastOccupant(beast, true);
+                                i--;
+                            }
+                        }
                     }
 
                 } else

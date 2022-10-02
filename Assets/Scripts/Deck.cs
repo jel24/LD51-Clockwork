@@ -9,7 +9,7 @@ public class Deck : MonoBehaviour
     Queue<Card> deckCards;
 
     [SerializeField] Hand hand;
-
+    [SerializeField] TriggeredEvent gameOverEvent;
 
     void Start()
     {
@@ -24,7 +24,7 @@ public class Deck : MonoBehaviour
         for (int i = 0; i < allCards.Length; i++)
         {
             deckCards.Enqueue(allCards[i]);
-            allCards[i].transform.localPosition = new Vector3(0f, .1f * i, 0f);
+            allCards[i].transform.localPosition = new Vector3(0f, .05f * i, 0f);
             allCards[i].transform.localEulerAngles = new Vector3(90f, 0f, 0f);
 
         }
@@ -32,7 +32,13 @@ public class Deck : MonoBehaviour
 
     public void DrawCard()
     {
-        hand.AddCard(deckCards.Dequeue());
+        if (deckCards.Count == 0)
+        {
+            gameOverEvent.Trigger();
+        } else
+        {
+            hand.AddCard(deckCards.Dequeue());
+        }
     }
 
     public void Shuffle()

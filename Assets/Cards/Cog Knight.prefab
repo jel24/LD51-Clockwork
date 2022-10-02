@@ -4879,6 +4879,10 @@ PrefabInstance:
       propertyPath: cardDescription
       value: Damages all Beasts in a column by 6 x Power.
       objectReference: {fileID: 0}
+    - target: {fileID: 4385892278902467479, guid: 0ace59c4b8c472547a307501f88f8df6, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5297642692478549490, guid: 0ace59c4b8c472547a307501f88f8df6, type: 3}
       propertyPath: whatHappens.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -4943,17 +4947,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardName: Cog Knight
-  cardDescription: 
+  cardDescription: Summons a level 0 Cog Knight at a space of your choosing.
   cardNameDisplay: {fileID: 4143701673481169612}
   cardDescriptionDisplay: {fileID: 5605479475450657828}
   powerDisplay: {fileID: 33898686106572760}
   burnFX: {fileID: 4615915469787064849}
   hoverFX: {fileID: 8952100519789826766}
+  powerupFX: {fileID: 9192810053395636345}
+  spellFX: {fileID: 0}
   targetType: 2
   mouseManager: {fileID: 0}
   minionPrefab: {fileID: 4413476963161646743, guid: 1395c048e92a6704798975dd6ff61ccf, type: 3}
   monsterParent: {fileID: 0}
-  spawnFX: {fileID: 7261975755308091235}
 --- !u!198 &4615915469787064849 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 8236504839355924613, guid: 0ace59c4b8c472547a307501f88f8df6, type: 3}
@@ -4973,5 +4978,10 @@ MonoBehaviour:
 --- !u!198 &8952100519789826766 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 5656178998218225754, guid: 0ace59c4b8c472547a307501f88f8df6, type: 3}
+  m_PrefabInstance: {fileID: 3621728813701655188}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &9192810053395636345 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 5607433587511167725, guid: 0ace59c4b8c472547a307501f88f8df6, type: 3}
   m_PrefabInstance: {fileID: 3621728813701655188}
   m_PrefabAsset: {fileID: 0}

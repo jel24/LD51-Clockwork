@@ -89,7 +89,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4683059696038120105, guid: 148d085881494b842a013bf3a5b6778a, type: 3}
       propertyPath: startingHealth
-      value: 200
+      value: 425
       objectReference: {fileID: 0}
     - target: {fileID: 7920137614143358130, guid: 148d085881494b842a013bf3a5b6778a, type: 3}
       propertyPath: m_Pitch

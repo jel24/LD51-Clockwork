@@ -14,7 +14,6 @@ public class HealthManager : ScriptableObject
     public void NewGame()
     {
         currentHealth = startingHealth;
-        updateHealth.Trigger();
     }
 
     public void TakeDamage(int howMuch)
@@ -23,6 +22,7 @@ public class HealthManager : ScriptableObject
         if (currentHealth <= 0)
         {
             currentHealth = 0;
+            Time.timeScale = .33f;
             onDeath.Trigger();
         }
         updateHealth.Trigger();

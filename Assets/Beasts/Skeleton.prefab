@@ -73,7 +73,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4683059696038120105, guid: 148d085881494b842a013bf3a5b6778a, type: 3}
       propertyPath: startingPower
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4683059696038120105, guid: 148d085881494b842a013bf3a5b6778a, type: 3}
       propertyPath: startingHealth

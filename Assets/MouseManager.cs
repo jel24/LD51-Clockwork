@@ -28,6 +28,13 @@ public class MouseManager : MonoBehaviour
         {
             if (boardTarget)
             {
+                if (activeCard == null)
+                {
+                    boardTarget = false;
+                    boardTargetUI.SetActive(false);
+                    activeTargetType = TargetType.none;
+
+                }
                 BoardSpace space = CheckForSpace();
                 Debug.Log(space);
 
@@ -38,6 +45,8 @@ public class MouseManager : MonoBehaviour
                     boardTarget = false;
                     boardTargetUI.SetActive(false);
                     activeCard = null;
+                    activeTargetType = TargetType.none;
+
                 }
             } else
             {
@@ -54,11 +63,18 @@ public class MouseManager : MonoBehaviour
     {
         if (boardTarget)
         {
-            BoardSpace space = CheckForSpace();
-            if (space)
+            if (activeCard == null)
             {
-                boardManager.HoverInput(space, activeTargetType);
+                activeTargetType = TargetType.none;
+            } else
+            {
+                BoardSpace space = CheckForSpace();
+                if (space)
+                {
+                    boardManager.HoverInput(space, activeTargetType);
+                }
             }
+
         }
         else
         {

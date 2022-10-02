@@ -10,10 +10,11 @@ public class GameOver : MonoBehaviour
 
     void Start()
     {
-        StartCoroutine("Reload");
+        StartCoroutine(Reload());
+        Time.timeScale = 1f;
     }
 
-    IEnumerable Reload()
+    IEnumerator Reload()
     {
         float timer = 0f;
         while (timer < howLongBeforeNewGame)

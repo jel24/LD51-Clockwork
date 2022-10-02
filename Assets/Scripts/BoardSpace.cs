@@ -39,7 +39,16 @@ public class BoardSpace : MonoBehaviour
     public void SetMinionOccupant(Minion m)
     {
         m.transform.position = transform.position;
-        minionOccupant = m;
+
+        if (beastOccupant)
+        {
+            m.Die();
+        } else
+        {
+            minionOccupant = m;
+        }
+
+
     }
 
     public void ClearBeastOccupant()

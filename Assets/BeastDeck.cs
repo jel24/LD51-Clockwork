@@ -9,6 +9,7 @@ public class BeastDeck : MonoBehaviour
     Queue<BeastCard> deckCards;
 
     [SerializeField] TextMeshProUGUI counter;
+    [SerializeField] TriggeredEvent victoryEvent;
 
     void Start()
     {
@@ -17,7 +18,7 @@ public class BeastDeck : MonoBehaviour
         for (int i = 0; i < allCards.Length; i++)
         {
             deckCards.Enqueue(allCards[i]);
-            allCards[i].transform.localPosition = new Vector3(0f, .1f * i, 0f);
+            allCards[i].transform.localPosition = new Vector3(0f, .05f * i, 0f);
             allCards[i].transform.localEulerAngles = new Vector3(90f, 0f, 0f);
 
         }
@@ -29,5 +30,9 @@ public class BeastDeck : MonoBehaviour
     {
         deckCards.Dequeue().Play();
         counter.text = deckCards.Count.ToString();
+        if (deckCards.Count == 0)
+        {
+            victoryEvent.Trigger();
+        }
     }
 }
